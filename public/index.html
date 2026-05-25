@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vulnerable Web Lab</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0d1117;
+        color: #e6edf3;
+        font-family: monospace;
+        padding: 40px;
+      }
+      h1 {
+        color: #00ff88;
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+      .subtitle {
+        color: #8b949e;
+        margin-bottom: 40px;
+        font-size: 14px;
+      }
+      .warning {
+        background: #2d1b1b;
+        border: 1px solid #ff4444;
+        color: #ff8888;
+        padding: 12px 16px;
+        border-radius: 6px;
+        margin-bottom: 40px;
+        font-size: 13px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        transition: border-color 0.2s;
+      }
+      .card:hover {
+        border-color: #00ff88;
+      }
+      .card-number {
+        color: #00ff88;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+      .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .card-desc {
+        color: #8b949e;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .owasp {
+        display: inline-block;
+        background: #1e3a2f;
+        color: #00ff88;
+        font-size: 11px;
+        padding: 3px 8px;
+        border-radius: 4px;
+        margin-top: 12px;
+      }
+      footer {
+        margin-top: 60px;
+        color: #3d6b4f;
+        font-size: 12px;
+      }
+      footer a {
+        color: #00ff88;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🔓 Vulnerable Web Lab</h1>
+    <p class="subtitle">
+      // A security learning lab — exploit each vulnerability, understand it,
+      patch it
+    </p>
+
+    <div class="warning">
+      ⚠️ This app is intentionally vulnerable. Run it locally only. Never deploy
+      to production.
+    </div>
+
+    <div class="grid">
+      <a class="card" href="/injection">
+        <div class="card-number">01</div>
+        <div class="card-title">NoSQL Injection</div>
+        <div class="card-desc">
+          Bypass authentication by injecting MongoDB operators into login
+          fields.
+        </div>
+        <span class="owasp">OWASP A03 · Injection</span>
+      </a>
+
+      <a class="card" href="/xss">
+        <div class="card-number">02</div>
+        <div class="card-title">Cross-Site Scripting (XSS)</div>
+        <div class="card-desc">
+          Inject malicious JavaScript into the page that executes in other
+          users' browsers.
+        </div>
+        <span class="owasp">OWASP A03 · Injection</span>
+      </a>
+
+      <a class="card" href="/auth">
+        <div class="card-number">03</div>
+        <div class="card-title">Broken Authentication</div>
+        <div class="card-desc">
+          Login with weak credentials and no rate limiting — brute force freely.
+        </div>
+        <span class="owasp">OWASP A07 · Auth Failures</span>
+      </a>
+
+      <a class="card" href="/idor">
+        <div class="card-number">04</div>
+        <div class="card-title">IDOR</div>
+        <div class="card-desc">
+          Access any user's private data just by changing an ID in the URL.
+        </div>
+        <span class="owasp">OWASP A01 · Broken Access Control</span>
+      </a>
+
+      <a class="card" href="/misconfig">
+        <div class="card-number">05</div>
+        <div class="card-title">Security Misconfiguration</div>
+        <div class="card-desc">
+          Server leaks stack traces, debug info, and internal error details.
+        </div>
+        <span class="owasp">OWASP A05 · Misconfiguration</span>
+      </a>
+
+      <a class="card" href="/exposure">
+        <div class="card-number">06</div>
+        <div class="card-title">Sensitive Data Exposure</div>
+        <div class="card-desc">
+          Passwords stored and returned in plain text — no hashing, no
+          protection.
+        </div>
+        <span class="owasp">OWASP A02 · Crypto Failures</span>
+      </a>
+    </div>
+
+    <footer>
+      <p>
+        Built by
+        <a href="https://github.com/DevwithMujeeb">Abdulmujeeb Uthman</a> ·
+        <a href="https://github.com/DevwithMujeeb/vulnerable-web-lab">GitHub</a>
+        · Part of the 90-day build challenge
+      </p>
+    </footer>
+  </body>
+</html>
