@@ -205,12 +205,12 @@ patched_alice | $2b$12$abc123xyz...    ← bcrypt hash ✅
 
 Detailed writeups for each vulnerability are in the `/writeups` folder:
 
-- [01 - NoSQL Injection](../../../Downloads/writeups/01-injection.md)
-- [02 - XSS](../../../Downloads/writeups/02-xss.md)
-- [03 - Broken Authentication](../../../Downloads/writeups/03-broken-auth.md)
-- [04 - IDOR](../../../Downloads/writeups/04-idor.md)
-- [05 - Security Misconfiguration](../../../Downloads/writeups/05-misconfig.md)
-- [06 - Sensitive Data Exposure](../../../Downloads/writeups/06-data-exposure.md)
+- [01 - NoSQL Injection](../../../writeups/01-injection.md)
+- [02 - XSS](../../../writeups/02-xss.md)
+- [03 - Broken Authentication](../../../writeups/03-broken-auth.md)
+- [04 - IDOR](../../../writeups/04-idor.md)
+- [05 - Security Misconfiguration](../../../writeups/05-misconfig.md)
+- [06 - Sensitive Data Exposure](../../../writeups/06-data-exposure.md)
 
 ---
 
